@@ -206,6 +206,19 @@ textarea {
   font-size: inherit;
   line-height: inherit; }
 
+#btn-voltar {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+}
+
+.titulo-login {
+  font-size: 24px;
+  text-align: center;
+ /* diminui o espaço abaixo */
+}
+
 button,
 input {
   overflow: visible; }
@@ -2072,8 +2085,8 @@ fieldset:disabled a.btn {
 
 .btn-primary {
   color: #fff;
-  background-color: #007bff;
-  border-color: #007bff; }
+  background-color: #0069d9;
+  border-color: #0069d9; }
   .btn-primary:hover {
     color: #fff;
     background-color: #0069d9;
@@ -8633,8 +8646,8 @@ h1, h2, h3, h4, h5,
   .btn:hover, .btn:active, .btn:focus {
     outline: none; }
   .btn.btn-primary {
-    background: #1b9ce3;
-    border: 1px solid #1b9ce3;
+    background: #0069d9;
+    border: 1px solid #0069d9;
     color: #fff; }
     .btn.btn-primary:hover {
       border: 1px solid #1b9ce3;

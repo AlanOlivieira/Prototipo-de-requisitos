@@ -86,25 +86,28 @@
 <section class="ftco-section">
   <div class="container">
     <div class="text-center mb-4">
-      <h2>Quem está acessando?</h2>
-      <div class="d-flex justify-content-center flex-wrap">
-        <button class="btn btn-primary mx-2 my-1" onclick="mostrarLogin('empresa')">Empresa</button>
-        <button class="btn btn-primary mx-2 my-1" onclick="mostrarLogin('estagiario')">Estagiário</button>
-        <button class="btn btn-primary mx-2 my-1" onclick="mostrarLogin('coordenador')">Coordenador</button>
-        <button class="btn btn-primary mx-2 my-1" onclick="mostrarLogin('secretaria')">Secretaria</button>
-      </div>
-    </div>
+      <h2 class="titulo-login">Bem vindo(a) de volta!</h2>
+        <div class="d-flex justify-content-center flex-wrap">
+        <button class="btn btn-primary mx-2 my-1 d-flex align-items-center" id="btn-voltar" onclick="window.location.href='teladelogin.html'">
+          <span class="ion-ios-arrow-back mr-2"></span> Voltar
+        </button>
+        <button class="btn btn-primary mx-2 my-1" onclick="window.location.href='teladeloginEmpresa.html'">Empresa</button>
+        <button class="btn btn-primary mx-2 my-1" onclick="window.location.href='teladeloginEstagiario.html'">Estagiário</button>
+        <button class="btn btn-primary mx-2 my-1" onclick="window.location.href='teladeloginCoordenador.html'">Coordenador</button>
+        <button class="btn btn-primary mx-2 my-1" onclick="window.location.href='teladeloginSecretaria.html'">Secretaria</button>
+</div>
 
-    <div id="formulario-login" class="p-3 bg-white shadow rounded" style="max-width: 400px; margin: 0 auto; border-radius: 15px !important;">
+
+    <div id="formulario-login" class="p-3 bg-white shadow rounded"  style="max-width: 450px; margin: 0 auto; border-radius: 15px !important; margin-top: 10px; padding: 25px;">
       <h5 class="mb-3 text-center" id="titulo-login">Login</h5>
       <form id="form-login" action="#" method="POST">
         <div class="form-group">
-          <label for="usuario">Usuário</label>
-          <input type="text" class="form-control" name="usuario" id="usuario" required>
+          <label for="usuario">Matrícula</label>
+          <input type="text" class="form-control" name="usuario" id="usuario" value="512346" required>
         </div>
         <div class="form-group">
           <label for="senha">Senha</label>
-          <input type="password" class="form-control" name="senha" id="senha" required>
+          <input type="password" class="form-control" name="senha" id="senha" value="********" required>
         </div>
         
         <input type="hidden" name="tipoUsuario" id="tipoUsuario" value="">
@@ -197,17 +200,5 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
     <script src="js/google-map.js"></script>
     <script src="js/main.js"></script>
-    <script>
-      function mostrarLogin(tipo) {
-        document.getElementById('tipoUsuario').value = tipo;
-        const titulo = {
-          empresa: 'Login - Empresa',
-          estagiario: 'Login - Estagiário',
-          coordenador: 'Login - Coordenador',
-          secretaria: 'Login - Secretaria da Faculdade'
-        };
-        document.getElementById('titulo-login').innerText = titulo[tipo];
-      }
-    </script>
 </body>
 </html>
