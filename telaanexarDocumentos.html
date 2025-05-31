@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <title>Enviar Relatório - TSEstágio</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/ionicons.min.css"> 
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .custom-form {
+      max-width: 720px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .success-message {
+      display: none;
+      color: green;
+      font-weight: bold;
+      text-align: center;
+      margin-top: 15px;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark ftco-navbar-light" id="ftco-navbar">
+  <div class="container d-flex align-items-center">
+    <a class="navbar-brand text-white font-weight-bold" href="#">TSEstagio</a>
+    <div class="collapse navbar-collapse" id="ftco-nav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item"><a href="index.html" class="nav-link">Pagina inicial</a></li>
+        <li class="nav-item"><a href="services.html" class="nav-link">Contato</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Sair</a></li>
+      </ul>
+      <form action="#" class="searchform order-lg-last ml-3">
+        <div class="form-group d-flex">
+          <input type="text" class="form-control pl-3" placeholder="Buscar Vagas">
+          <button type="submit" class="form-control search">
+            <span class="ion-ios-search"></span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</nav>
+
+<section class="ftco-section">
+  <div class="container">
+    <button class="btn btn-primary mx-2 my-1 d-flex align-items-center" onclick="window.location.href='telapainelEstagiario.html'">
+      <span class="ion-ios-arrow-back mr-2"></span> Voltar
+    </button>
+    <h2 class="text-center mb-5">Anexar Documentos do Estágio</h2>
+
+    <div class="custom-form">
+      <form id="form-anexo">
+        <div class="form-group">
+          <label for="tipo-documento">Tipo de Documento</label>
+          <select class="form-control" id="tipo-documento">
+            <option>Selecione...</option>
+            <option>Termo de Compromisso</option>
+            <option>Declaração de Vínculo</option>
+            <option>Ficha de Frequência</option>
+            <option>Relatório Final</option>
+            <option>Outros</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="arquivo">Selecionar Arquivo (PDF ou Imagem)</label>
+          <input type="file" class="form-control-file" id="arquivo" accept=".pdf, .png, .jpg, .jpeg">
+        </div>
+
+        <div class="text-center">
+          <button type="submit" class="btn btn-primary mt-3">Anexar Documento</button>
+        </div>
+        <script>
+  
+    document.getElementById('form-anexo').addEventListener('submit', function(e) {
+    e.preventDefault();
+    document.getElementById('mensagem-sucesso').style.display = 'block';
+  });
+</script>
+
+      </form>
+
+      <div class="success-message" id="mensagem-sucesso">
+        Documento enviado com sucesso!
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="ftco-footer ftco-bg-dark ftco-section">
+  <div class="container">
+    <div class="row mb-5">
+      
+      <div class="col-md-6 col-lg-3">
+        <div class="ftco-footer-widget mb-5">
+          <h2 class="ftco-heading-2">TSEstágio</h2>
+          <ul class="list-unstyled">
+            <li><a href="index.html" class="py-1 d-block">Início</a></li>
+            <li><a href="project.html" class="py-1 d-block">Vagas</a></li>
+            <li><a href="services.html" class="py-1 d-block">Contato</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3">
+        <div class="ftco-footer-widget mb-5">
+          <h2 class="ftco-heading-2">Documentos</h2>
+          <ul class="list-unstyled">
+            <li><a href="#" class="py-1 d-block">Termo de Compromisso</a></li>
+            <li><a href="#" class="py-1 d-block">Normas do Estágio</a></li>
+            <li><a href="#" class="py-1 d-block">LGPD</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3">
+        <div class="ftco-footer-widget mb-5">
+          <h2 class="ftco-heading-2">Contato</h2>
+          <div class="block-23 mb-3">
+            <ul>
+              <li><span class="icon icon-phone"></span><span class="text">+55 88 XXXX-XXXX</span></li>
+              <li><span class="icon icon-envelope"></span><span class="text">estagios@ufc.br</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3">
+        <div class="ftco-footer-widget mb-5">
+          <h2 class="ftco-heading-2">Redes Sociais</h2>
+          <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-3">
+            <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+            <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+            <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+        Copyright &copy;<script>document.write(new Date().getFullYear());</script> Todos os direitos reservados | TSEstágio| Template por <a href="https://colorlib.com" target="_blank">Colorlib</a>
+        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+  document.getElementById('form-relatorio').addEventListener('submit', function(e) {
+    e.preventDefault();
+    document.getElementById('mensagem-sucesso').style.display = 'block';
+  });
+</script>
+</body>
+</html>
+
+
+
+
+
+
+

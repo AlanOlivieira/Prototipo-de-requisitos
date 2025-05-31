@@ -9933,3 +9933,11 @@ textarea.form-control {
   100% {
     stroke-dasharray: 89, 200;
     stroke-dashoffset: -136px; } }
+.nome-estagiario {
+  color: #ffffff;
+}
+.sidebar a:hover {
+  background-color: #1f2e5a;
+  border-radius: 5px;
+  padding-left: 10px;
+}
