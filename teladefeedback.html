@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <title>Mensagens - TSEstágio</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/ionicons.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .chat-toggle-btn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      font-size: 28px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      z-index: 1000;
+    }
+
+    .chat-drawer {
+      position: fixed;
+      bottom: 100px;
+      right: 30px;
+      width: 350px;
+      max-height: 500px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      display: none;
+      flex-direction: column;
+      overflow: hidden;
+      z-index: 1000;
+    }
+
+    .chat-header {
+      background: #007bff;
+      color: white;
+      padding: 12px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .chat-body {
+      padding: 15px;
+      overflow-y: auto;
+      flex-grow: 1;
+    }
+
+    .message {
+      margin-bottom: 12px;
+    }
+
+    .message.admin .bubble {
+      background: #f1f1f1;
+      border-radius: 10px;
+      padding: 10px;
+      max-width: 80%;
+    }
+
+    .message.user .bubble {
+      background: #007bff;
+      color: white;
+      border-radius: 10px;
+      padding: 10px;
+      max-width: 80%;
+      margin-left: auto;
+    }
+
+    .chat-footer {
+      padding: 10px;
+      border-top: 1px solid #ddd;
+    }
+
+    .chat-footer textarea {
+      resize: none;
+      width: 100%;
+      border-radius: 5px;
+      padding: 8px;
+      border: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark ftco-navbar-light" id="ftco-navbar">
+  <div class="container d-flex align-items-center">
+    <a class="navbar-brand text-white font-weight-bold" href="#">TSEstagio</a>
+    <div class="collapse navbar-collapse" id="ftco-nav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item"><a href="teladeloginEstagiario.html" class="nav-link">Início</a></li>
+        <li class="nav-item"><a href="teladecontato.html" class="nav-link">Contato</a></li>
+        <li class="nav-item"><a href="teladeloginEstagiario.html"class="nav-link">Sair</a></li>
+      </ul>
+      <form action="#" class="searchform order-lg-last ml-3">
+        <div class="form-group d-flex">
+          <input type="text" class="form-control pl-3" placeholder="Precisa de ajuda?">
+          <button type="submit" class="form-control search"><span class="ion-ios-search"></span></button>
+        </div>
+      </form>
+    </div>
+  </div>
+</nav>
+
+<section class="ftco-section" style="padding-top: 30px; padding-bottom: 60px;">
+
+  <div class="container">
+    <button class="btn btn-primary mb-4 d-flex align-items-center" onclick="window.location.href='telapainelEstagiario.html'">
+      <span class="ion-ios-arrow-back mr-2"></span> Voltar
+    </button>
+    <h2 class="text-center">Mensagens e feedback</h2>
+    
+    <div class="chat-box" style="max-width: 600px; margin: 0 auto; margin-top: 40px;">
+      <form class="form-msg">
+        <div class="form-group">
+          <label for="destinatario">Destinatário</label>
+          <select class="form-control" id="destinatario">
+            <option value="">Selecione</option>
+            <option value="secretaria">Secretaria</option>
+            <option value="coordenador">Coordenador</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="mensagem">Nova mensagem ou dúvida</label>
+          <textarea class="form-control" id="mensagem" rows="4" placeholder="Digite sua mensagem aqui..."></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="arquivo">Anexar Arquivo</label>
+          <input type="file" class="form-control-file" id="arquivo">
+        </div>
+
+        <div class="text-right">
+          <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<div class="chat-drawer" id="chatDrawer">
+  <div class="chat-header">Secretaria</div>
+  <div class="chat-body" id="chatBody">
+    <div class="message admin">
+      <div class="bubble">Olá Mario, revise o documento enviado. Está faltando a assinatura do supervisor.</div>
+    </div>
+    <div class="message user">
+      <div class="bubble">Ok! Vou corrigir e enviar novamente.</div>
+    </div>
+  </div>
+  <div class="chat-footer">
+    <textarea id="msgInput" rows="2" placeholder="Digite sua mensagem..."></textarea>
+  </div>
+</div>
+
+<button class="chat-toggle-btn" onclick="toggleChat()">
+  <span class="icon ion-ios-chatboxes"></span>
+</button>
+
+<footer class="ftco-footer ftco-bg-dark ftco-section">
+  <div class="container">
+    <div class="row mb-5 justify-content-center text-center">
+      
+      <div class="col-md-6 col-lg-3">
+        <div class="ftco-footer-widget mb-5">
+          <h2 class="ftco-heading-2">TSEstágio</h2>
+          <ul class="list-unstyled">
+            <li><a href="index.html" class="py-1 d-block">Início</a></li>
+            <li><a href="project.html" class="py-1 d-block">Vagas</a></li>
+            <li><a href="services.html" class="py-1 d-block">Contato</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3">
+        <div class="ftco-footer-widget mb-5">
+          <h2 class="ftco-heading-2">Documentos</h2>
+          <ul class="list-unstyled">
+            <li><a href="#" class="py-1 d-block">Termo de Compromisso</a></li>
+            <li><a href="#" class="py-1 d-block">Normas do Estágio</a></li>
+            <li><a href="#" class="py-1 d-block">LGPD</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3">
+        <div class="ftco-footer-widget mb-5">
+          <h2 class="ftco-heading-2">Contato</h2>
+          <div class="block-23 mb-3">
+            <ul>
+              <li><span class="icon icon-phone"></span><span class="text">+55 88 XXXX-XXXX</span></li>
+              <li><span class="icon icon-envelope"></span><span class="text">estagios@ufc.br</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+        Copyright &copy;<script>document.write(new Date().getFullYear());</script> Todos os direitos reservados | TSEstágio | Template por <a href="https://colorlib.com" target="_blank">Colorlib</a>
+        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  function toggleChat() {
+    const drawer = document.getElementById("chatDrawer");
+    drawer.style.display = drawer.style.display === "flex" ? "none" : "flex";
+  }
+</script>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

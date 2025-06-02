@@ -1,44 +1,34 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <title>Painel do Estagiário - TSEStágio</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
-    <link rel="stylesheet" href="css/animate.css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
-    <link rel="stylesheet" href="css/aos.css">
-    <link rel="stylesheet" href="css/ionicons.min.css">
-    <link rel="stylesheet" href="css/flaticon.css">
-    <link rel="stylesheet" href="css/icomoon.css">
-    <link rel="stylesheet" href="css/style.css">
+  <title>Contato - TSEstágio</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/ionicons.min.css">
+  <link rel="stylesheet" href="css/style.css">
   <style>
-    .sidebar {
-      background-color: #0B0E27;
-      min-height: 100vh;
-      padding-top: 20px;
+    .contato-container {
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+      max-width: 900px;
+      margin: auto;
     }
-    .sidebar a {
-      color: white;
-      padding: 10px;
-      display: block;
-      text-decoration: none;
-      transition: background 0.3s;
+    .contato-container h4 {
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+    .info-contato p, .info-contato a {
+      font-size: 1rem;
+      color: #333;
       margin-bottom: 8px;
     }
-    .sidebar a:hover {
-      background-color: #00366d;
-    }
-    .profile-pic {
-      width: 120px;
-      height: 120px;
-      object-fit: cover;
-      border-radius: 50%;
-      border: 3px solid #fff;
-      margin-bottom: 15px;
+    .info-contato a {
+      text-decoration: underline;
+      color: #007bff;
     }
   </style>
 </head>
@@ -49,7 +39,7 @@
     <a class="navbar-brand text-white font-weight-bold" href="#">TSEstagio</a>
     <div class="collapse navbar-collapse" id="ftco-nav">
       <ul class="navbar-nav ml-auto">
-        <li class="nav-item"><a href="telapainelEstagiario.html" class="nav-link"> inicio</a></li>
+        <li class="nav-item"><a href="teladeloginEstagiario.html" class="nav-link">Início</a></li>
         <li class="nav-item"><a href="services.html" class="nav-link">Contato</a></li>
         <li class="nav-item"><a href="teladeloginEstagiario.html" class="nav-link">Sair</a></li>
       </ul>
@@ -63,45 +53,42 @@
   </div>
 </nav>
 
-<div class="container-fluid">
-  <div class="row">
-
-
-    <div class="col-md-3 sidebar text-white">
-      <div class="text-center">
-        
-        <img src="images/icone dep (1).webp" alt="Foto de Perfil do estagiario" class="profile-pic">
-        <h5><p><span class="nome-estagiario">Mario Santos da Silva</span></p></h5>
-        <p style="font-size: 0.9em;">Curso: Engenharia de Software | Matricula: 510965</p>
-      </div>
-      <a href="teladeanexodedoxsSecretaria.html"> Declarações/Documentos fornecidos pela secretaria</a>
-      <a href="telaenviarRelatorios.html"> Enviar Relatório</a>
-      <a href="telaanexarDocumentos.html"> Anexar Documentos</a>
-      <a href="teladeHistoricos.html"> Ver Históricos</a>
-      <a href="teladefeedback.html"> Ver Feedbacks e Mensagens</a>
-      <a href="teladeVagas.html"> Vagas de estagio</a>
-      <a href="#"> Editar Perfil</a>
-      <a href="teladeloginEstagiario.html"> Sair da conta</a>
-    </div>
-
-
-    <div class="col-md-9 p-4">
-      <h2 class="mb-4">Painel do Estagiário</h2>
-      <div class="card mb-3">
-        <div class="card-body">
-          <h5>Informações do Estágio atual</h5>
-          <p><strong>Empresa:</strong> Instituto Atlantico</p>
-          <p><strong>Supervisor:</strong> Taylor Alison</p>
-          <p><strong>Carga Horária:</strong> 30h semanais</p>
-          <p><strong>Status:</strong> Estágio em andamento</p>
+<section class="ftco-section" style="padding-top: 30px;">
+  <div class="container">
+    <h2 class="text-center mb-4">Entre em Contato</h2>
+    <div class="contato-container">
+      <div class="row">
+        <div class="col-md-6">
+          <h4>Preencha o Formulário</h4>
+          <form>
+            <div class="form-group">
+              <label for="nome">Nome completo</label>
+              <input type="text" class="form-control" id="nome">
+            </div>
+            <div class="form-group">
+              <label for="email">E-mail</label>
+              <input type="email" class="form-control" id="email">
+            </div>
+            <div class="form-group">
+              <label for="mensagem">Mensagem</label>
+              <textarea class="form-control" id="mensagem" rows="4" placeholder="Digite aqui sua dúvida ou solicitação..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary mt-2">Enviar Mensagem</button>
+          </form>
         </div>
-      </div>
-      <div class="alert alert-info">
-        Lembrete: Seu próximo relatório deve ser enviado até <strong>10/06/2025</strong>.
+
+        <div class="col-md-6 info-contato">
+          <h4>Outras Formas de Contato</h4>
+          <p><strong>Telefone:</strong> (88) 99999-8888</p>
+          <p><strong>E-mail:</strong> estagios@gmail.br</p>
+          <p><strong>WhatsApp:</strong> (88) 98888-7777</p>
+          <p><a href="#"> Agendar atendimento com setor de estágio</a></p>
+          <p><a href="#"> Acessar chat online</a></p>
+        </div>
       </div>
     </div>
   </div>
-</div>
+</section>
 
  <footer class="ftco-footer ftco-bg-dark ftco-section">
   <div class="container">
@@ -152,7 +139,6 @@
     </div>
   </div>
 </footer>
-    <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
 
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery-migrate-3.0.1.min.js"></script>
@@ -166,8 +152,7 @@
     <script src="js/aos.js"></script>
     <script src="js/jquery.animateNumber.min.js"></script>
     <script src="js/scrollax.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-    <script src="js/google-map.js"></script>
     <script src="js/main.js"></script>
+
 </body>
 </html>

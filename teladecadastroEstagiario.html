@@ -37,10 +37,13 @@
             </div>
             <div class="collapse navbar-collapse" id="ftco-nav">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active"><a href="index.html" class="nav-link">Página Inicial</a></li>
-                    <li class="nav-item"><a href="about.html" class="nav-link">Sobre nós</a></li>
-                    <li class="nav-item"><a href="project.html" class="nav-link">Empresas parceiras</a></li>
-                    <li class="nav-item"><a href="services.html" class="nav-link">Contato</a></li>
+                    <li class="nav-item active"><a href="teladeloginEstagiario.html" class="nav-link">Inicio</a></li>
+                    <li class="nav-item"><a href="teladecontato.html" class="nav-link">Contato</a></li>
+                    <form action="#" class="searchform order-lg-last ml-3">
+        <div class="form-group d-flex">
+          <input type="text" class="form-control pl-3" placeholder="Precisa de ajuda?">
+          <button type="submit" class="form-control search"><span class="ion-ios-search"></span></button>
+          
                 </ul>
             </div>
         </div>
@@ -54,9 +57,10 @@
         
    
         <div class="row justify-content-center"> 
-<button class="btn btn-primary mx-2 my-1 d-flex align-items-center" id="btn-voltar" onclick="window.location.href='teladeloginEstagiario.html'">
+<a href="teladeloginEstagiario.html" class="btn btn-primary mx-2 my-1 d-flex align-items-center" id="btn-voltar">
   <span class="ion-ios-arrow-back mr-2"></span> Voltar para login
-</button>
+</a>
+
 
           <div class="col-md-8">
 
@@ -102,6 +106,24 @@
     <label for="supervisor">Supervisor (opcional)</label>
     <input type="text" class="form-control" id="supervisor">
   </div>
+  <div class="form-group mt-4">
+  <div class="alert alert-warning" role="alert">
+    Atenção: Após preencher seus dados, anexe os documentos obrigatórios em PDF para validação do cadastro.
+  </div>
+
+  <label for="termo">Anexar Termo de Compromisso (PDF)</label>
+  <input type="file" class="form-control-file mb-3" id="termo" accept=".pdf">
+
+  <label for="declaracao">Anexar Declaração de Vínculo (PDF)</label>
+  <input type="file" class="form-control-file mb-3" id="declaracao" accept=".pdf">
+
+  <label for="historico">Anexar Histórico Acadêmico (PDF)</label>
+  <input type="file" class="form-control-file mb-3" id="historico" accept=".pdf">
+
+  <label for="outros">Outros Documentos (opcional - PDF)</label>
+  <input type="file" class="form-control-file" id="outros" accept=".pdf">
+</div>
+
 
   <button type="submit" class="btn btn-primary">Enviar pré-cadastro</button>
   <span id="mensagem-sucesso" style="color: green; font-weight: bold; margin-left: 15px; display: none;">

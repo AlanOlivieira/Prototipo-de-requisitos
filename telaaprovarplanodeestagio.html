@@ -1,40 +1,37 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <title>TSEstagio - Cadastro</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
-    <link rel="stylesheet" href="css/animate.css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
-    <link rel="stylesheet" href="css/aos.css">
-    <link rel="stylesheet" href="css/ionicons.min.css">
-    <link rel="stylesheet" href="css/flaticon.css">
-    <link rel="stylesheet" href="css/icomoon.css">
-    <link rel="stylesheet" href="css/style.css">
+  <title>Aprovar Plano de Estágio - TSEstágio</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/ionicons.min.css">
+  <link rel="stylesheet" href="css/style.css">
   <style>
-    .custom-form {
-      max-width: 720px;
-      margin: 0 auto;
+    .plano-card {
       background: #fff;
-      padding: 30px;
+      padding: 25px;
       border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      box-shadow: 0 0 10px rgba(0,0,0,0.08);
+      margin-bottom: 30px;
     }
-    .success-message {
-      display: none;
-      color: green;
-      font-weight: bold;
-      text-align: center;
-      margin-top: 15px;
+    .plano-card h5 {
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+    .plano-card p {
+      margin-bottom: 8px;
+    }
+    .btn-group {
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+      margin-top: 20px;
     }
   </style>
 </head>
 <body>
-
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark ftco-navbar-light" id="ftco-navbar">
   <div class="container d-flex align-items-center">
@@ -61,56 +58,44 @@
       <span class="ion-ios-arrow-back mr-2"></span> Voltar
     </button>
 
-    <h2 class="text-center mb-4">Cadastrar Nova Vaga de Estágio</h2>
+    <h2 class="mb-5 text-center">Planos de Estágio Pendentes</h2>
 
-    <div class="custom-form">
-      <form id="form-vaga">
-        <div class="form-group">
-          <label for="titulo">Tipo da Vaga</label>
-          <input type="text" class="form-control" id="titulo" placeholder="Ex: Estágio em Desenvolvimento Web">
-        </div>
+    <div class="plano-card">
+      <h5>Plano de Estágio - Camila Loures Silva</h5>
+      <p><strong>Curso:</strong> Engenharia de Software</p>
+      <p><strong>Email:</strong> camila@alu.ufc.br</p>
+      <p><strong>Supervisor:</strong> Ana Beatriz</p>
+      <p><strong>Carga Horária:</strong> 30h semanais</p>
+      <p><strong>Período:</strong> 01/07/2025 a 01/01/2026</p>
+      <p><strong>Atividades Propostas:</strong> Desenvolvimento e manutenção de sistemas web, participação em reuniões de equipe, testes e documentação de software.</p>
+      <p><strong>Arquivo:</strong> <a href="docs/plano_joao.pdf" target="_blank">Ver Plano (PDF)</a></p>
 
-        <div class="form-group">
-          <label for="area">Área</label>
-          <input type="text" class="form-control" id="area" placeholder="">
-        </div>
-
-        <div class="form-group">
-          <label for="carga">Carga Horária Semanal</label>
-          <input type="number" class="form-control" id="carga" placeholder="Ex: 30">
-        </div>
-
-        <div class="form-group">
-          <label for="requisitos">Requisitos para a vaga</label>
-          <textarea class="form-control" id="requisitos" rows="3" placeholder="Ex: Conhecimento em HTML, CSS, JavaScript"></textarea>
-        </div>
-
-        <div class="form-group">
-          <label for="descricao">Descrição da Vaga</label>
-          <textarea class="form-control" id="descricao" rows="4" placeholder="Descreva as atividades a serem desenvolvidas"></textarea>
-        </div>
-
-        <div class="form-group">
-          <label for="modalidade">Modalidade</label>
-          <select class="form-control" id="modalidade">
-            <option>Presencial</option>
-            <option>Remoto</option>
-            <option>Híbrido</option>
-          </select>
-        </div>
-
-        <div class="text-center">
-          <button type="submit" class="btn btn-primary mt-3">Enviar para Análise</button>
-        </div>
-      </form>
-
-      <div class="success-message" id="mensagem-sucesso">
-         Vaga cadaastrada com sucesso! Aguarde a análise da secretaria e acompanhe o feedback na caixa de mensagens.
+      <div class="btn-group">
+        <button class="btn btn-outline-primary btn-sm">Analisar Documentação</button>
+        <button class="btn btn-success btn-sm">Aprovar</button>
+        <button class="btn btn-danger btn-sm">Rejeitar</button>
       </div>
     </div>
+
+    <div class="plano-card">
+      <h5>Plano de Estágio - Ozzy leite</h5>
+      <p><strong>Curso:</strong> Ciência da Computação</p>
+      <p><strong>Email:</strong> ozzy@alu.ufc.br</p>
+      <p><strong>Supervisor:</strong> Bruno Costa</p>
+      <p><strong>Carga Horária:</strong> 20h semanais</p>
+      <p><strong>Período:</strong> 15/08/2025 a 15/02/2026</p>
+      <p><strong>Atividades Propostas:</strong> Apoio na análise de dados, relatórios em Python e integração com bancos de dados SQL.</p>
+      <p><strong>Arquivo:</strong> <a href="docs/plano_maria.pdf" target="_blank">Ver Plano (PDF)</a></p>
+
+      <div class="btn-group">
+        <button class="btn btn-outline-primary btn-sm">Analisar Documentação</button>
+        <button class="btn btn-success btn-sm">Aprovar</button>
+        <button class="btn btn-danger btn-sm">Rejeitar</button>
+      </div>
+    </div>
+
   </div>
 </section>
-
 
 <footer class="ftco-footer ftco-bg-dark ftco-section">
   <div class="container">
@@ -164,11 +149,5 @@
 
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
-<script>
-  document.getElementById('form-vaga').addEventListener('submit', function(e) {
-    e.preventDefault();
-    document.getElementById('mensagem-sucesso').style.display = 'block';
-  });
-</script>
 </body>
 </html>
