@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <title>Gerenciar Estagiários - TSEstágio</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/ionicons.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .card-box {
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 25px;
+      background: #fff;
+      box-shadow: 0 0 8px rgba(0,0,0,0.05);
+    }
+    .card-box h5 {
+      font-weight: bold;
+    }
+    .btn-acao {
+      margin-right: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark ftco-navbar-light" id="ftco-navbar">
+  <div class="container d-flex align-items-center">
+    <a class="navbar-brand text-white font-weight-bold" href="#">TSEstagio</a>
+    <div class="collapse navbar-collapse" id="ftco-nav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item"><a href="index.html" class="nav-link">Início</a></li>
+        <li class="nav-item"><a href="services.html" class="nav-link">Contato</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Sair</a></li>
+      </ul>
+      <form action="#" class="searchform order-lg-last ml-3">
+        <div class="form-group d-flex">
+          <input type="text" class="form-control pl-3" placeholder="Buscar Vagas">
+          <button type="submit" class="form-control search"><span class="ion-ios-search"></span></button>
+        </div>
+      </form>
+    </div>
+  </div>
+</nav>
+
+<section class="ftco-section" style="padding-top: 30px;">
+  <div class="container">
+    <button class="btn btn-primary mb-4 d-flex align-items-center" onclick="window.location.href='telapainelCoordenador.html'">
+      <span class="ion-ios-arrow-back mr-2"></span> Voltar
+    </button>
+
+    <h2 class="mb-4">Pré-Cadastros Pendentes</h2>
+
+    <div class="card-box">
+      <h5>Camila Loures</h5>
+      <p><strong>Matrícula:</strong> 554400</p>
+      <p><strong>Curso:</strong> Engenharia de Software</p>
+      <p><strong>Email:</strong> joao@email.com</p>
+      <p><strong>Status:</strong> Aguardando aprovação</p>
+      <div class="d-flex justify-content-end">
+        <a href="documentos_estagiario.html" class="btn btn-outline-primary btn-sm btn-acao"> Analisar Documentação Anexada</a>
+        <button class="btn btn-success btn-sm btn-acao">Aprovar</button>
+        <button class="btn btn-danger btn-sm">Recusar</button>
+      </div>
+    </div>
+
+    <div class="card-box">
+      <h5>Ozzy Leite da Silva</h5>
+      <p><strong>Matrícula:</strong> 534211</p>
+      <p><strong>Curso:</strong> Ciência da Computação</p>
+      <p><strong>Email:</strong> maria@email.com</p>
+      <p><strong>Status:</strong> Aguardando aprovação</p>
+      <div class="d-flex justify-content-end">
+        <a href="documentos_estagiario.html" class="btn btn-outline-primary btn-sm btn-acao"> Analisar Documentação Anexada</a>
+
+        <button class="btn btn-success btn-sm btn-acao">Aprovar</button>
+        <button class="btn btn-danger btn-sm">Recusar</button>
+      </div>
+    </div>
+
+    <h2 class="mt-5 mb-4">Cadastrar Novo Estagiário</h2>
+
+    <div class="card-box">
+      <form id="form-novo-estagiario">
+        <div class="form-group">
+          <label for="nome">Nome do Estagiário</label>
+          <input type="text" class="form-control" id="nome">
+        </div>
+
+        <div class="form-group">
+          <label for="matricula">Matrícula</label>
+          <input type="text" class="form-control" id="matricula">
+        </div>
+
+        <div class="form-group">
+          <label for="curso">Curso</label>
+          <input type="text" class="form-control" id="curso">
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email institucional</label>
+          <input type="email" class="form-control" id="email">
+        </div>
+
+        <div class="form-group">
+          <label for="telefone">Telefone</label>
+          <input type="tel" class="form-control" id="telefone">
+        </div>
+
+        <div class="form-group">
+          <label for="empresa">Empresa (se já houver)</label>
+          <input type="text" class="form-control" id="empresa">
+        </div>
+
+        <div class="form-group">
+          <label for="horas">Carga Horária</label>
+          <input type="number" class="form-control" id="horas">
+        </div>
+
+        <div class="text-center">
+          <button type="submit" class="btn btn-primary mt-3">Cadastrar Estagiário</button>
+        </div>
+        <div class="text-success text-center mt-3" style="display:none;" id="mensagem-sucesso">Cadastro realizado com sucesso!</div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer class="ftco-footer ftco-bg-dark ftco-section">
+  <div class="container">
+    <div class="row mb-5">
+      <div class="col-md-6 col-lg-3">
+        <div class="ftco-footer-widget mb-5">
+          <h2 class="ftco-heading-2">TSEstágio</h2>
+          <ul class="list-unstyled">
+            <li><a href="index.html" class="py-1 d-block">Início</a></li>
+            <li><a href="project.html" class="py-1 d-block">Vagas</a></li>
+            <li><a href="services.html" class="py-1 d-block">Contato</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="ftco-footer-widget mb-5">
+          <h2 class="ftco-heading-2">Documentos</h2>
+          <ul class="list-unstyled">
+            <li><a href="#" class="py-1 d-block">Termo de Compromisso</a></li>
+            <li><a href="#" class="py-1 d-block">Normas do Estágio</a></li>
+            <li><a href="#" class="py-1 d-block">LGPD</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="ftco-footer-widget mb-5">
+          <h2 class="ftco-heading-2">Contato</h2>
+          <div class="block-23 mb-3">
+            <ul>
+              <li><span class="icon icon-phone"></span><span class="text">+55 88 XXXX-XXXX</span></li>
+              <li><span class="icon icon-envelope"></span><span class="text">estagios@ufc.br</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="ftco-footer-widget mb-5">
+          <h2 class="ftco-heading-2">Redes Sociais</h2>
+          <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-3">
+            <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+            <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+            <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <p>Copyright &copy;<script>document.write(new Date().getFullYear());</script> Todos os direitos reservados | TSEstágio | Template por <a href="https://colorlib.com" target="_blank">Colorlib</a></p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+  document.getElementById("form-novo-estagiario").addEventListener("submit", function(e) {
+    e.preventDefault();
+    document.getElementById("mensagem-sucesso").style.display = "block";
+  });
+</script>
+</body>
+</html>
